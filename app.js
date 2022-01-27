@@ -10,8 +10,10 @@ app.use(morgan("combined"));
 app.use(bodyParser.json());
 
 const bookRoutes = require("./api/routes/books");
+const userRoutes = require("./api/routes/users");
 
 app.use('/books', bookRoutes);
+app.use('/users', userRoutes);
 
 app.get('/', (req,res)=>{
     res.send('Home')

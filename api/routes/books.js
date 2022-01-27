@@ -10,7 +10,7 @@ router.post("/", (req, res, next) => {
 
     Book.findOne({title: req.body.title}).then(book => {
         if (book) {
-            return res.status(409).json({message: "Podana książka już jest wpisana"})
+            return res.status(409).json({message: "This book is already in Database!"})
         }
     })
 
